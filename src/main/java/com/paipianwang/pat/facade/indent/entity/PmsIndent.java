@@ -56,6 +56,17 @@ public class PmsIndent extends BaseEntity {
 	/** 订单给客户发短信 **/
 	private Boolean sendToUser = true;
 	
+	/** 分销人名字**/
+	private String salesmanName = null;
+	
+	public String getSalesmanName() {
+		return salesmanName;
+	}
+
+	public void setSalesmanName(String salesmanName) {
+		this.salesmanName = salesmanName;
+	}
+
 	public String getIndentName() {
 		return indentName;
 	}

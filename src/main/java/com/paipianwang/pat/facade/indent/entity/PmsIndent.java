@@ -59,6 +59,38 @@ public class PmsIndent extends BaseEntity {
 	/** 分销人名字**/
 	private String salesmanName = null;
 	
+	private long indentId = 0l; // 订单编号
+	
+	private String service_name = null; 
+	
+	private double service_price = 0.0d;
+	
+	private double service_discount = 0.0d;
+	
+	private double service_realPrice = 0.0d;
+
+	private String product_name = null;
+	
+	private String team_name = null;
+	
+	private String user_name = null;
+	
+	private String telephone = null;
+	
+	private String user_email = null;
+	
+	private long[] ids;//订单数组
+	
+	private String token = null;
+	
+	public String getToken() {
+		return token;
+	}
+
+	public void setToken(String token) {
+		this.token = token;
+	}
+
 	public String getSalesmanName() {
 		return salesmanName;
 	}
@@ -193,5 +225,93 @@ public class PmsIndent extends BaseEntity {
 
 	public void setSendToUser(Boolean sendToUser) {
 		this.sendToUser = sendToUser;
+	}
+
+	public long getIndentId() {
+		return indentId;
+	}
+
+	public void setIndentId(long indentId) {
+		this.indentId = indentId;
+	}
+
+	public String getService_name() {
+		return service_name;
+	}
+
+	public void setService_name(String service_name) {
+		this.service_name = service_name;
+	}
+
+	public double getService_price() {
+		return service_price;
+	}
+
+	public void setService_price(double service_price) {
+		this.service_price = service_price;
+	}
+
+	public double getService_discount() {
+		return service_discount;
+	}
+
+	public void setService_discount(double service_discount) {
+		this.service_discount = service_discount;
+	}
+
+	public double getService_realPrice() {
+		return service_realPrice;
+	}
+
+	public void setService_realPrice(double service_realPrice) {
+		this.service_realPrice = service_realPrice;
+	}
+
+	public String getProduct_name() {
+		return product_name;
+	}
+
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
+	}
+
+	public String getTeam_name() {
+		return team_name;
+	}
+
+	public void setTeam_name(String team_name) {
+		this.team_name = team_name;
+	}
+
+	public String getUser_name() {
+		return user_name;
+	}
+
+	public void setUser_name(String user_name) {
+		this.user_name = user_name;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getUser_email() {
+		return user_email;
+	}
+
+	public void setUser_email(String user_email) {
+		this.user_email = user_email;
+	}
+
+	public long[] getIds() {
+		return ids;
+	}
+
+	public void setIds(long[] ids) {
+		this.ids = ids;
 	}
 }

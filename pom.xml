@@ -19,12 +19,17 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.paipianwang.pat</groupId>
 			<artifactId>pat-common</artifactId>
 			<version>${pat-common.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.paipianwang.pat</groupId>
+			<artifactId>pat-facade-user</artifactId>
+			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

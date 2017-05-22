@@ -1,7 +1,6 @@
 package com.paipianwang.pat.facade.indent.entity;
 
 import com.paipianwang.pat.common.entity.BaseEntity;
-import com.paipianwang.pat.facade.user.entity.PmsUser;
 
 /**
  * 订单业务实体类

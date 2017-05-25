@@ -88,9 +88,34 @@ public interface PmsIndentFacade {
 
 	/**
 	 * 更新订单客服
+	 * 
 	 * @param indent
 	 * @return
 	 */
 	public long updateCustomerService(PmsIndent indent);
-	
+
+	/**
+	 * 查询指定ID订单记录
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public PmsIndent findIndentById(long id);
+
+	/**
+	 * 根基需求文档查找订单
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public PmsIndent findIndentByRequireId(long id);
+
+	/**
+	 * 管家驳回订单
+	 * 
+	 * @param indentId
+	 * @return
+	 */
+	public long rejected(PmsIndent indent);
+
 }

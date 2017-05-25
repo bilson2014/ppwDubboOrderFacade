@@ -18,9 +18,6 @@ public class PmsIndent extends BaseEntity {
 	/** 订单编号 **/
 	private String indentNum = null;
 
-	/** 0:新订单 1:处理中 2:完成 3:停滞 **/
-	private int indentType;
-
 	private Long serviceId = null;
 
 	private String orderDate = null;
@@ -110,6 +107,40 @@ public class PmsIndent extends BaseEntity {
 	private Integer position;
 
 	private Long requireId;
+
+	/** 0:新订单 1:处理中 2:完成 3:停滞 4:再次沟通5:真实6:虚假 **/
+	private int indentType;
+
+	private Long pMId;
+
+	/**
+	 * 新订单
+	 */
+	public static final int ORDER_NEW = 0;
+	/**
+	 * 处理中
+	 */
+	public static final int ORDER_HANDLING = 1;
+	/**
+	 * 完成
+	 */
+	public static final int ORDER_DONE = 2;
+	/**
+	 * 停滞
+	 */
+	public static final int ORDER_STOP = 3;
+	/**
+	 * 再次沟通
+	 */
+	public static final int ORDER_AGAIN = 4;
+	/**
+	 * 真实
+	 */
+	public static final int ORDER_REAL = 5;
+	/**
+	 * 虚假
+	 */
+	public static final int ORDER_SHAM = 6;
 
 	public String getToken() {
 		return token;
@@ -391,41 +422,40 @@ public class PmsIndent extends BaseEntity {
 		this.requireId = requireId;
 	}
 
+	public Long getpMId() {
+		return pMId;
+	}
+
+	public void setpMId(Long pMId) {
+		this.pMId = pMId;
+	}
+
+
 	/**
 	 * 根据当前订单实例，生成用户实例
 	 * 
 	 * @return
-	 *//*
-	public PmsUser getUser() {
-		PmsUser user = new PmsUser();
-		user.setUserCompany(this.userCompany);
-		user.setRealName(this.realName);
-		user.setWeChat(this.wechat);
-		user.setTelephone(this.telephone);
-		return user;
-	}
-
-	*//**
-	 * 比较订单关联的客户是否有修改
+	 */
+	/*
+	 * public PmsUser getUser() { PmsUser user = new PmsUser();
+	 * user.setUserCompany(this.userCompany); user.setRealName(this.realName);
+	 * user.setWeChat(this.wechat); user.setTelephone(this.telephone); return
+	 * user; }
 	 * 
-	 * @param user
-	 * @return
-	 *//*
-	public boolean compareDBUser(PmsUser user) {
-		if (user != null) {
-			if (user.getUserId() == this.userId) {
-				if (user.getUserCompany() != null && user.getUserCompany().equals(this.userCompany)) {
-					if (user.getRealName() != null && user.getRealName().equals(this.realName)) {
-						if (user.getWeChat() == null
-								|| (user.getWeChat() != null && user.getWeChat().equals(this.wechat))) {
-							if (user.getTelephone() != null && user.getTelephone().equals(this.telephone))
-								return true;
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
-*/
+	 *//**
+		 * 比较订单关联的客户是否有修改
+		 * 
+		 * @param user
+		 * @return
+		 *//*
+		 * public boolean compareDBUser(PmsUser user) { if (user != null) { if
+		 * (user.getUserId() == this.userId) { if (user.getUserCompany() != null
+		 * && user.getUserCompany().equals(this.userCompany)) { if
+		 * (user.getRealName() != null &&
+		 * user.getRealName().equals(this.realName)) { if (user.getWeChat() ==
+		 * null || (user.getWeChat() != null &&
+		 * user.getWeChat().equals(this.wechat))) { if (user.getTelephone() !=
+		 * null && user.getTelephone().equals(this.telephone)) return true; } }
+		 * } } } return false; }
+		 */
 }

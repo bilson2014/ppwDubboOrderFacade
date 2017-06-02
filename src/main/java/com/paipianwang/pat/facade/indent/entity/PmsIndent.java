@@ -108,11 +108,22 @@ public class PmsIndent extends BaseEntity {
 
 	private Long requireId;
 
-	/** 0:新订单 1:处理中 2:完成 3:停滞 4:再次沟通5:真实6:虚假 **/
+	/** 原状态：0:新订单 1:处理中 2:完成 3:停滞 **/
+	/** 新状态：0:新订单 1:处理中 2:完成 3:停滞 4:再次沟通5:真实6:虚假 --->7:提交 **/
+	/** 提交状态对应，客服处理完毕订单提交订单给项目经理的时候，订单所处的状态 **/
 	private int indentType;
-
+	/**
+	 * 项目经理ID
+	 */
 	private Long pMId;
-
+	/**
+	 * 客服备注
+	 */
+	private String cSRecomment;
+	/**
+	 * 项目经理备注
+	 */
+	private String pMRecomment;
 	/**
 	 * 新订单
 	 */
@@ -141,6 +152,10 @@ public class PmsIndent extends BaseEntity {
 	 * 虚假
 	 */
 	public static final int ORDER_SHAM = 6;
+	/**
+	 * 提交
+	 */
+	public static final int ORDER_SUBMIT = 7;
 
 	public String getToken() {
 		return token;
@@ -430,6 +445,21 @@ public class PmsIndent extends BaseEntity {
 		this.pMId = pMId;
 	}
 
+	public String getcSRecomment() {
+		return cSRecomment;
+	}
+
+	public void setcSRecomment(String cSRecomment) {
+		this.cSRecomment = cSRecomment;
+	}
+
+	public String getpMRecomment() {
+		return pMRecomment;
+	}
+
+	public void setpMRecomment(String pMRecomment) {
+		this.pMRecomment = pMRecomment;
+	}
 
 	/**
 	 * 根据当前订单实例，生成用户实例

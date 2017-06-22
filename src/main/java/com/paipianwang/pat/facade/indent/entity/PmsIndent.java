@@ -1,5 +1,7 @@
 package com.paipianwang.pat.facade.indent.entity;
 
+import java.util.List;
+
 import com.paipianwang.pat.common.entity.BaseEntity;
 
 /**
@@ -124,6 +126,17 @@ public class PmsIndent extends BaseEntity {
 	 * 项目经理备注
 	 */
 	private String pMRecomment;
+
+	/**
+	 * 订单来源
+	 */
+	private Integer indentSource;
+
+	/**
+	 * 推荐人
+	 */
+	private Long referrerId = null;
+
 	/**
 	 * 新订单
 	 */
@@ -156,6 +169,45 @@ public class PmsIndent extends BaseEntity {
 	 * 提交
 	 */
 	public static final int ORDER_SUBMIT = 7;
+
+	//////////////////////////////// 订单来源///////////////////////////////
+	/**
+	 * 线上-网站
+	 */
+	public static final int SOURCE_ONLINE_WEBSITE = 1;
+	/**
+	 * 线上-活动
+	 */
+	public static final int SOURCE_ONLINE_ACTIVITY = 2;
+	/**
+	 * 线上-新媒体
+	 */
+	public static final int SOURCE_ONLINE_NEW_MEDIA = 3;
+	/**
+	 * 线下-电销
+	 */
+	public static final int SOURCE_OFFLINE_TELEMARKETING = 4;
+	/**
+	 * 线下-直销
+	 */
+	public static final int SOURCE_OFFLINE_DIRECT_SELLING = 5;
+	/**
+	 * 线下-活动
+	 */
+	public static final int SOURCE_OFFLINE_ACTIVITY = 6;
+	/**
+	 * 线下-渠道
+	 */
+	public static final int SOURCE_OFFLINE_CHANNEL = 7;
+	/**
+	 * 复购
+	 */
+	public static final int SOURCE_REPEAT = 8;
+
+	/**
+	 * 订单来源
+	 */
+	private List<Integer> types;
 
 	public String getToken() {
 		return token;
@@ -459,6 +511,30 @@ public class PmsIndent extends BaseEntity {
 
 	public void setpMRecomment(String pMRecomment) {
 		this.pMRecomment = pMRecomment;
+	}
+
+	public Integer getIndentSource() {
+		return indentSource;
+	}
+
+	public void setIndentSource(Integer indentSource) {
+		this.indentSource = indentSource;
+	}
+
+	public List<Integer> getTypes() {
+		return types;
+	}
+
+	public void setTypes(List<Integer> types) {
+		this.types = types;
+	}
+
+	public Long getReferrerId() {
+		return referrerId;
+	}
+
+	public void setReferrerId(Long referrerId) {
+		this.referrerId = referrerId;
 	}
 
 	/**

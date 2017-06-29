@@ -6,7 +6,7 @@ import com.paipianwang.pat.common.entity.BaseEntity;
 
 /**
  * 订单业务实体类
- * 
+ *  
  * @author Jack
  * @version 1.0
  *

@@ -6,7 +6,7 @@ import com.paipianwang.pat.common.entity.BaseEntity;
 
 /**
  * 订单业务实体类
- *  
+ * 
  * @author Jack
  * @version 1.0
  *
@@ -74,6 +74,11 @@ public class PmsIndent extends BaseEntity {
 	private String user_name = null;
 
 	private String telephone = null;
+
+	/**
+	 * 更新时间
+	 */
+	private String updateDate = null;
 
 	private String user_email = null;
 
@@ -263,6 +268,14 @@ public class PmsIndent extends BaseEntity {
 
 	public void setOrderDate(String orderDate) {
 		this.orderDate = orderDate;
+	}
+
+	public String getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(String updateDate) {
+		this.updateDate = updateDate;
 	}
 
 	public Long getUserId() {

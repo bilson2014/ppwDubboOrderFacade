@@ -175,60 +175,10 @@ public class PmsIndent extends BaseEntity {
 	 */
 	public static final int ORDER_SUBMIT = 7;
 
-	//////////////////////////////// 订单来源///////////////////////////////
-	/**
-	 * 线上-网站
-	 */
-	public static final int SOURCE_ONLINE_WEBSITE = 1;
-	/**
-	 * 线上-活动
-	 */
-	public static final int SOURCE_ONLINE_ACTIVITY = 2;
-	/**
-	 * 线上-新媒体
-	 */
-	public static final int SOURCE_ONLINE_NEW_MEDIA = 3;
-	/**
-	 * 线下-电销
-	 */
-	public static final int SOURCE_OFFLINE_TELEMARKETING = 4;
-	/**
-	 * 线下-直销
-	 */
-	public static final int SOURCE_OFFLINE_DIRECT_SELLING = 5;
-	/**
-	 * 线下-活动
-	 */
-	public static final int SOURCE_OFFLINE_ACTIVITY = 6;
-	/**
-	 * 线下-渠道
-	 */
-	public static final int SOURCE_OFFLINE_CHANNEL = 7;
-	/**
-	 * 复购
-	 */
-	public static final int SOURCE_REPEAT = 8;
-	/**
-	 * 线上-400
-	 */
-	public static final int SOURCE_ONLINE_400 = 9;
-	/**
-	 * 线上-商桥
-	 */
-	public static final int SOURCE_ONLINE_BRIDGE = 10;
-
 	/**
 	 * 订单来源
 	 */
 	private List<Integer> types;
-	/**
-	 * 订单来源显示值
-	 */
-	private String indentSourceName;
-	/**
-	 * 订单状态显示值
-	 */
-	private String indentTypeName;
 
 	public String getToken() {
 		return token;
@@ -564,22 +514,6 @@ public class PmsIndent extends BaseEntity {
 
 	public void setReferrerId(Long referrerId) {
 		this.referrerId = referrerId;
-	}
-
-	public String getIndentSourceName() {
-		return this.indentSourceName;
-	}
-
-	public void setIndentSourceName(String indentSourceName) {
-		this.indentSourceName = indentSourceName;
-	}
-
-	public String getIndentTypeName() {
-		return this.indentTypeName;
-	}
-
-	public void setIndentTypeName(String indentTypeName) {
-		this.indentTypeName = indentTypeName;
 	}
 
 	/**

@@ -4,14 +4,14 @@ package com.paipianwang.pat.facade.indent.entity;
  * 订单来源
  */
 public enum IndentSource {
-	website(1,"线上-网站"),
-	activity(2,"线上-活动"),
-	new_media(3,"线上-新媒体"),
 	telemarketing(4,"线下-电销"),
 	direct_selling(5,"线下-直销"),
 	offline_activity(6,"线下-活动"),
 	offline_channel(7,"线下-渠道"),
 	repeat(8,"复购"),
+	website(1,"线上-网站"),
+	activity(2,"线上-活动"),
+	new_media(3,"线上-新媒体"),	
 	_400(9,"线上-400"),
 	bridge(10,"线上-商桥"),
 	

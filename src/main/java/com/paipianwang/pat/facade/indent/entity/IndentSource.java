@@ -4,7 +4,7 @@ package com.paipianwang.pat.facade.indent.entity;
  * 订单来源
  */
 public enum IndentSource {
-	telemarketing(4,"线下-电销"),
+	telemarketing(4,"线上-电销"),
 	direct_selling(5,"线下-直销"),
 	offline_activity(6,"线下-活动"),
 	offline_channel(7,"线下-渠道"),

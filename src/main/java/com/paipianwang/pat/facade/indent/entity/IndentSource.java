@@ -3,12 +3,12 @@ package com.paipianwang.pat.facade.indent.entity;
 /**
  * 订单来源
  */
-public enum IndentSource {
-	telemarketing(4,"线上-电销"),
+public enum IndentSource {	
 	direct_selling(5,"线下-直销"),
 	offline_activity(6,"线下-活动"),
 	offline_channel(7,"线下-渠道"),
 	repeat(8,"复购"),
+	telemarketing(4,"线上-电销"),
 	website(1,"线上-网站"),
 	activity(2,"线上-活动"),
 	new_media(3,"线上-新媒体"),	
@@ -27,7 +27,9 @@ public enum IndentSource {
 	
 	wechat_cost(19,"线上-公众号-成本计算器 "),
 	wechat_direct(20,"线上-公众号-直接下单"),		
-	wechat_product(21,"线上-公众号-作品");
+	wechat_product(21,"线上-公众号-作品"),
+	
+	sem_mg(22,"线上-SEM");
 	
 	private int value;//存储值
 	private String name;//显示名称

@@ -29,7 +29,8 @@ public enum IndentSource {
 	wechat_direct(20,"线上-公众号-直接下单"),		
 	wechat_product(21,"线上-公众号-作品"),
 	
-	sem_mg(22,"线上-SEM");
+	sem_mg(22,"线上-SEM"),
+	dingding(23,"线上-钉钉");
 	
 	private int value;//存储值
 	private String name;//显示名称

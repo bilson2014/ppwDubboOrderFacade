@@ -74,17 +74,19 @@ public interface PmsIndentFacade {
 	 * 查询某人订单总数
 	 * 
 	 * @param salesmanUniqueId
+	 * @param indentType
 	 *            某人唯一标识
 	 */
-	public long countBySalesmanUniqueId(String salesmanUniqueId);
+	public long countBySalesmanUniqueId(String salesmanUniqueId,List<Integer> indentType);
 
 	/**
 	 * 查询某人订单总金额
 	 * 
 	 * @param salesmanUniqueId
+	 * @param indentType
 	 *            某人唯一标识
 	 */
-	public Double sumPriceBySalesmanUniqueId(String salesmanUniqueId);
+	public Double sumPriceBySalesmanUniqueId(String salesmanUniqueId,List<Integer> indentType);
 
 	/**
 	 * 更新订单客服
